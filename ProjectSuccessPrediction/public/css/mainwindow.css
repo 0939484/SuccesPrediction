@@ -1,0 +1,26 @@
+.imgAndLabel{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.imgAndLabel:hover{
+    cursor: pointer;
+}
+
+.imgAndLabel img{
+    width: 6em;
+    height: 6em;
+}
+
+.imgAndLabel h1{
+    font-size: 30px;
+    color: #a8c3c8;
+}
+
+.centered{
+    text-align: center;
+}
+
+#notificationTable{
+    margin-top: 40px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Prediction success
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/result.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/myProjectsStyle.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/myProjectsStyle.css">
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <% include ../partials/topnav %>  
+
+    <div class="buttons">
+        <a class="nav-button" href="dashboard">Home</a>
+        <a class="nav-button" href="projects">My Projects</a>
+        <a class="nav-button" href="update">Project</a>
+        <button type="button" class="btn btn-success btn-lg">Calculation</button>
+    </div>
+    <div id='result_content'>
+        <div class='column'>
+            <span>Project has a success rate of:</span>
+            <span id='prediction' class='res'></span>
+            <span id="chart-header">And belongs in the area of:</span>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+    <script src="/js/result.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,678 @@
+{
+	"info": {
+		"_postman_id": "44b9f3e1-8e53-43bd-93ba-94f85dcedd17",
+		"name": "Testig Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all project from the table",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "startDate",
+							"value": "06.04.2000",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Europe",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Ukraine",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "mySector",
+							"type": "text"
+						},
+						{
+							"key": "typeProject",
+							"value": "myType",
+							"type": "text"
+						},
+						{
+							"key": "typeInovation",
+							"value": "myInovation",
+							"type": "text"
+						},
+						{
+							"key": "peopleNumber",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/table",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get project by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/table/113",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"table",
+						"113"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add project to the table",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "startDate",
+							"value": "06.04.2000",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Europe",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Ukraine",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "mySector",
+							"type": "text"
+						},
+						{
+							"key": "typeProject",
+							"value": "myType",
+							"type": "text"
+						},
+						{
+							"key": "typeInovation",
+							"value": "myInovation",
+							"type": "text"
+						},
+						{
+							"key": "peopleNumber",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/table",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update project by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "startDate",
+							"value": "06.04.2000",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Europe",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Ukraine",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "mySector",
+							"type": "text"
+						},
+						{
+							"key": "typeProject",
+							"value": "myType",
+							"type": "text"
+						},
+						{
+							"key": "typeInovation",
+							"value": "myInovation",
+							"type": "text"
+						},
+						{
+							"key": "peopleNumber",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/table",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/table/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"table",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/member",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get member by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/member/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Roman",
+							"type": "text"
+						},
+						{
+							"key": "middleName",
+							"value": "Vas",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Smakula",
+							"type": "text"
+						},
+						{
+							"key": "emailAddress",
+							"value": "smakula2012@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/member",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Connect member to project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "projectId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "memberId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/project/member",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete member",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/member/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"member",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All projects of member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/project/member/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"member",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All member of project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All project members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/project/member",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Project Member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/question",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Questions For member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Questions By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete question",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/question/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"question",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All answers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/answer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get answer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/answer/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"answer",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update answer by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/answer/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"answer",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All project answers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/project/answer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"project",
+						"answer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

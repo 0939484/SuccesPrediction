@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Update Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/myProjectsStyle.css">
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/datepicker.min.js"></script>
+    <link rel="stylesheet" href="/css//datepicker.min.css" type="text/css">
+</head>
+
+<body>
+
+    <% include ../partials/topnav %>  
+
+    <div class="buttons">
+        <a class="nav-button" href="dashboard">Home</a>
+        <a class="nav-button" href="projects">My Projects</a>
+        <button type="button" class="btn btn-success btn-lg">Edit Projects</button>
+    </div>
+
+    
+    <div class="container">
+        <h1 class="section_header" style="text-align: center">Update project</h1>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-12 createProject">
+
+                <h2 class="section_header">
+                    Information
+                </h2>
+                <form id="updateProjectForm" autocomplete="off">
+                    <div class="form-group">
+                        <label for="name">What is the name of your project?</label>
+                        <input class="form-control" id="name" type="text" placeholder="Enter any name" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-field-date fs-anim-upper" for="startDate">What's starting date of the
+                            project?</label>
+
+                        <input class="form-control" id="startDate" name="startDate" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-field-label fs-anim-upper" for="location">Select your continent</label>
+                        <select id="location" class="form-control">
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Austria">Australia</option>
+                            <option value="SouthAmerica">South America</option>
+                            <option value="NorthAmerica">North America</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-field-label fs-anim-upper" for="sector">Sector</label>
+                        <select id="sector" class="form-control">
+                            <option value="Sector1">Sector1</option>
+                            <option value="Sector2">Sector2</option>
+                            <option value="Sector3">Sector3</option>
+                            <option value="Sector4">Sector4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-field-label fs-anim-upper" for="country">What is your country?</label>
+                        <input class="form-control" id="country" name="country" placeholder="Netherlands">
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-field-label fs-anim-upper" for="typeProject">Type of project </label>
+                        <select id="typeProject" class="form-control">
+                            <option value="Substitution">Substitution</option>
+                            <option value="Augmentation">Augmentation</option>
+                            <option value="Modification">Modification</option>
+                            <option value="Redefinition">Redefinition</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-field-label fs-anim-upper" for="typeInnovation">Type of innovation </label>
+                        <select id="typeInnovation" class="form-control">
+                            <option value="Incremental">Incremental</option>
+                            <option value="Breakthrough">Breakthrough</option>
+                            <option value="Disruptive">Disruptive</option>
+                            <option value="GameChanger">Game changer</option>
+                        </select>
+                    </div>
+                    <h1 id="peopleNumber" class="fs-field-label fs-anim-upper"></h1>
+                    <div class="row">
+                        <button class="col-3 ml-2 btn btn-primary" type="submit">Update Project</button>
+                        <button id="cancelButton" class="col-3 ml-2 btn btn-danger" type="button">Cancel</button>
+                    </div>
+                </form><!-- /fs-form -->
+            </div>
+            <div class=" col-lg-6 col-12">
+
+
+                <h2 class="section_header">
+                    Members
+                </h2>
+                <div id="members_block">
+
+                    <div class="justify-content-center row add_member">
+                        <input class="form-control" id="addMemberField" name="startDate" list="emailList" />
+                        <datalist id="emailList">
+                        </datalist>
+                         <button id="addMember" type="button" class="col-5 ml-4 btn btn-secondary">Add member</button>
+                    </div>
+
+                    <div class="table100">
+                        <table>
+                            <tbody id="membersTableBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <button id="modifyMembers" type="button" class="btn btn-secondary">Modify</button>
+                </div>
+
+                <div id="members-controls">
+                    <button id="members-remove-button" type="button" class="btn btn-danger control-button">Remove</button>
+                    <button id="members-cancel-button" type="button" class="btn btn-info control-button">Cancel</button>
+                </div>
+
+                <h2 class="section_header">
+                    Questions
+                </h2>
+
+                <div id="questions_block">
+
+                    <div class="justify-content-center row add_member">
+                        <input class="form-control" id="addMemberField" name="startDate" list="emailList" />
+                        <datalist id="emailList">
+                        </datalist>
+                         <button id="addMember" type="button" class="col-5 ml-4 btn btn-secondary">Add question</button>
+                    </div>
+                    
+                    <div class="table100">
+                        <table>
+                            <tbody id="questionTableBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <button id="modifyMembers" type="button" class="btn btn-secondary">Modify</button>
+                </div>
+
+                <div class="justify-content-center row">
+                    <form class="col-12">
+                        <div id="checkboxContainer">
+                        <button id="sendQuestions" type="button" class="btn btn-success control-button">Send
+                            Questions</button>
+                        <button id="calculateResult" type="button" class="btn btn-info control-button">Calculate result</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/vendor/jquery/jquery-dateFormat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/updateProject.js"></script>
+</body>
+
+</html>

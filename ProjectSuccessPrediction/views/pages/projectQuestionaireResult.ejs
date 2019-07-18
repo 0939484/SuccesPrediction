@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Prediction success
+    </title>
+    <link rel="stylesheet" href="./css/projectQuestionaireResult.css" type="text/css">
+</head>
+
+<body>
+<div id='header'>
+    <div class='column'>
+        <span id='title'>Success<br> prediction<br> results</span>
+        <div class='hdivider'>
+
+        </div>
+        <span id='subtitle'>
+            <span id="peopleAnswered"></span> employees have filled in the questions.Here are the results:
+        </span>
+    </div>
+</div>
+
+<div id='content'>
+    <div class='column'>
+        <span>Complexity</span>
+        <!-- <img src="./img/left.png"> -->
+        <canvas id="complexityChart"> </canvas>
+        <canvas id="complexityPie"> </canvas>
+    </div>
+    <div class='vdivider'>
+    </div>
+    <div class='hdivider'>
+    </div>
+    <div class='column'>
+        <span>Impact</span>
+        <!-- <img src="./img/right.png"> -->
+        <canvas id="impactBar"> </canvas>
+        <canvas id="impactPie"> </canvas>
+    </div>
+</div>
+<div id='calculate'>
+    <a href="result.html">Calculate success</a>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="js/projectQuestionaireResult.js"></script>
+</body>
+</html>

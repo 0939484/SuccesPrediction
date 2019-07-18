@@ -1,0 +1,50 @@
+********************DESCRIPTION********************
+This is not the final version of project API.
+Routes with (NI - not implemented) will be implemented soon.
+Unnecessary routes will be removed.
+*parameters = [here fields of the object to pass to server are declared]
+********************Table********************
+GET/table - return all projects that are stored in db
+GET/table/:id - return project with id
+POST/table - add new project to the table, parameters = project
+PUT/table/:id - update project, parameters = project
+(NI)DELETE/table/:id - remove project and all staff connected to it
+*project = [startDate, location, country, sector, typeProject, typeInovation, peopleNumber]
+********************Question********************
+GET/question - return all questions that are stored in db
+GET/question/:id - return question with id
+(NI)GET/question - return question with with text, parameters = question
+POST/question - add new question, parameters = question
+PUT/question/:id - update question, parameters = question
+(NI)DELETE/question/:id - remove questions with this id and all answers and project answers to this question 
+*question = [question]
+********************Answer********************
+GET/answer - return all answers that are stored in db
+GET/answer/:id - return answer with id
+POST/answer - add new answer, parameters = answer
+PUT/answer/:id - update answer, parameters = answer
+(NI)DELETE/answer/:id - remove answers with this id and all projectAnswers which are connected to it 
+*answer = [answer, questionId]
+********************ProjectAnswer********************
+GET/project/answer - return all project answers that are stored in db
+(NI)GET/project/:projectId/answer - return all answers with this project
+POST/project/answer - add new project answer, parameters = projectAnswer
+(NI)POST/project/:projectId/answer - add answer to projectAnswers and answers, parameters = answer
+POST/project/answer - add new projectAnswer, parameters = projectAnswer
+PUT/project/answer/:id - update projectAnswer, parameters = projectAnswer
+DELETE/project/answer/:id - remove projectAnswer
+********************Member********************
+GET/member - return all members that are stored in db
+GET/member/:id - return member with id
+POST/member - add new member, parameters = member
+PUT/member/:id - update member, parameters = member
+(NI)DELETE/member/:id - remove members with this id and all projectMembers which are connected to it 
+*member = [firstName, middleName, lastName, emailAddress]
+********************ProjectMember********************
+GET/project/member - return all project members that are stored in db
+(NI)GET/project/:projectId/member - return all members with this project
+POST/project/member - add new project member, parameters = projectMember
+POST/project/member - add new projectAnswer, parameters = projectMember
+PUT/project/:id - update projectAnswer, parameters = projectAnswer
+DELETE/project/answer/:id - remove projectAnswer
+*projectMember = [projectId, memberId]

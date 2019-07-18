@@ -1,0 +1,6 @@
+mysql -u root -p
+GRANT ALL PRIVILEGES ON *.* TO 'successProjectDeveloper'@'localhost' IDENTIFIED BY 'Success1_';
+\q
+mysql -u successProjectDeveloper -p
+CREATE DATABASE successProjectDatabase;
+USE successProjectDatabase;
